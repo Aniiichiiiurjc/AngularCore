@@ -16,7 +16,15 @@ export const routes: Routes = [
         component: ListComponent
     },
     {
-        path: 'list/:id',
+        path: 'list/:table',
         component: ListComponent
+    },
+    {
+        path: 'list/:table/:id',
+        component: ListComponent
+    },
+    {
+        path: '**',
+        component: HomeComponent
     }
 ];
