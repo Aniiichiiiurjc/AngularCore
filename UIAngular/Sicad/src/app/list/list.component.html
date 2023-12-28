@@ -1,1 +1,6 @@
-<p>list {{listId}}</p>
+<!-- <p>list {{listId}}</p> -->
+@if(listId == -1){
+    <app-h4 *ngFor="let element of list" [h4]="element"></app-h4>
+} @else{
+    <app-h4 [h4]="list[listId]"></app-h4>
+}
