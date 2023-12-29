@@ -1,18 +1,18 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
 
-import { H4Component } from './h4.component';
+import { H4DetailComponent } from './h4-detail.component';
 
-describe('H4Component', () => {
-  let component: H4Component;
-  let fixture: ComponentFixture<H4Component>;
+describe('H4DetailComponent', () => {
+  let component: H4DetailComponent;
+  let fixture: ComponentFixture<H4DetailComponent>;
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      imports: [H4Component]
+      imports: [H4DetailComponent]
     })
     .compileComponents();
     
-    fixture = TestBed.createComponent(H4Component);
+    fixture = TestBed.createComponent(H4DetailComponent);
     component = fixture.componentInstance;
     fixture.detectChanges();
   });

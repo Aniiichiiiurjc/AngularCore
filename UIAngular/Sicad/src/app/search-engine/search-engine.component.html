@@ -1,0 +1,13 @@
+<table class="table">
+    <thead>
+        <tr>
+            <th *ngFor="let p of Object.keys(list[0])">{{p}}</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr *ngFor="let e of list">
+            <td *ngFor="let pr of Object.keys(list[0])">{{e[pr]}}</td>
+
+        </tr>
+    </tbody>
+</table>

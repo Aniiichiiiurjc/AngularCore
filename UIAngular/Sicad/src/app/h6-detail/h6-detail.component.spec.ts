@@ -1,18 +1,18 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
 
-import { ListComponent } from './list.component';
+import { H6DetailComponent } from './h6-detail.component';
 
-describe('ListComponent', () => {
-  let component: ListComponent;
-  let fixture: ComponentFixture<ListComponent>;
+describe('H6DetailComponent', () => {
+  let component: H6DetailComponent;
+  let fixture: ComponentFixture<H6DetailComponent>;
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      imports: [ListComponent]
+      imports: [H6DetailComponent]
     })
     .compileComponents();
     
-    fixture = TestBed.createComponent(ListComponent);
+    fixture = TestBed.createComponent(H6DetailComponent);
     component = fixture.componentInstance;
     fixture.detectChanges();
   });
