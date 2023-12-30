@@ -13,15 +13,12 @@ import {MatTableDataSource, MatTableModule} from '@angular/material/table';
 export class SearchEngineComponent implements AfterViewInit{
   @Input() list!: Item[];
   Object = Object;
-  // constructor() {
-  //   //this.list = list;
-  //   console.log(this.list);
-  // }
   dataSource!: MatTableDataSource<any>;
   @ViewChild(MatPaginator) paginator!: MatPaginator;
-  
-  ngAfterViewInit() {
+  ngOnInit() {
     this.dataSource = new MatTableDataSource<any>(this.list);
+  }
+  ngAfterViewInit() {
     this.dataSource.paginator = this.paginator;
   }
 }
