@@ -1,8 +1,8 @@
-import { Component } from '@angular/core';
+import { Component, inject } from '@angular/core';
 import { CommonModule } from '@angular/common';
-import {ActivatedRoute} from '@angular/router';
 import { SearchEngineComponent } from '../search-engine/search-engine.component';
 import { H4 } from '../h4';
+import { H4Service } from '../h4.service';
 
 @Component({
   selector: 'app-h4-detail',
@@ -12,16 +12,9 @@ import { H4 } from '../h4';
   styleUrl: './h4-detail.component.css'
 })
 export class H4DetailComponent {
-  listH4: H4 [] = [
-    {
-      id: 0,
-      ncage: '0117B',
-      name: 'Airbus Defence and Space'
-    },
-    {
-      id: 1,
-      ncage: '0118B',
-      name: 'Indra'
-    }
-  ];
+  h4List: H4[] = [];
+  h4Service: H4Service = inject(H4Service);
+  constructor() {
+    this.h4List = this.h4Service.getAllH4List();
+  }
 }
