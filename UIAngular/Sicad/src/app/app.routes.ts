@@ -15,10 +15,10 @@ export const routes: Routes = [
         path: 'home',
         component: HomeComponent
     },
-    // {
-    //     path: 'list',
-    //     component: ListComponent
-    // },
+    {
+        path: 'login',
+        component: LoginComponent
+    },
     {
         path: 'h4',
         component: H4DetailComponent,
@@ -26,7 +26,8 @@ export const routes: Routes = [
     },
     {
         path: 'h6',
-        component: H6DetailComponent     
+        component: H6DetailComponent,
+        canActivate: [authGuard]     
     },
     // {
     //     path: 'list/:table/:id',
